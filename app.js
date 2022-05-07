@@ -1,17 +1,16 @@
-const rect = {
-    perimeter: (x, y) => 2* (x + y),
-    area: (x, y) => x * y
-};
+const rect = require('./rectangle');
 
 function solveRect(l, w) {
-    console.log(`Solving for rectangle with dimentions: ${l}, ${w}`);
+  console.log(`Solving for rectangle with dimentions: ${l}, ${w}`);
 
-    if (l <= 0 || w <= 0) {
-        console.log(`Rectangle dimentions must be greater than zero. Recived: ${l}, ${w}`)
-    } else{
-        console.log(`Area of rectangle: ${rect.area(l, w)}`)
-        console.log(`Perimeter of rectangle: ${rect.perimeter(l, w)}`)
-    }
+  if (l <= 0 || w <= 0) {
+    console.log(
+      `Rectangle dimentions must be greater than zero. Received: ${l}, ${w}`
+    );
+  } else {
+    console.log(`Area of rectangle: ${rect.area(l, w)}`);
+    console.log(`Perimeter of rectangle: ${rect.perimeter(l, w)}`);
+  }
 }
 
 solveRect(2, 4);
